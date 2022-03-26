@@ -2,7 +2,7 @@
 - 👀 I’m interested in ... astronomy, physics, web/mobile/software development
 - 🌱 I’m currently learning ...
 - 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...+2349086417512 on WhatsApp
+- 📫 How to reach me ...+2349132295829 on WhatsApp
 
 <!---
 kamapeter/kamapeter is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
