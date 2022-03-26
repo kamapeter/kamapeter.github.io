@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="materialize/materialize.css" title="" type="" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css" media="all">
+    html {
+      scroll-behavior: smooth
+    }
+
+    .material-icons.medium {
+      font-size: 36px
+    }
+
+    a {
+      color: inherit !important;
+    }
+
+    .mx {
+      margin: 0px 10px
+    }
+
+    .waveb {
+      background-image: url(./circle.svg);
+      background-size: cover
+    }
+
+    .my-divider {
+      height: 3px;
+      width: 40%;
+      margin: 0 auto 20px auto;
+    }
+
+    brand-logo {
+      width: 100%;
+      overflow: hidden
+    }
+
+    @media (min-width:600px) {
+      .equal {
+        display: flex;
+        position: relative
+      }
+
+      .top-off {
+        position: relative;
+        top: 60px
+      }
+
+      .tp-on {
+        position: relative;
+        top: -240px
+      }
+
+      .s-width {
+        width: 500px;
+      }
+
+      .s-mb {
+        position: absolute;
+        top: 50%;
+        transform: translateY(50%)
+      }
+      .list-inline {
+        padding-left: 0;
+        margin-left: -5px;
+        list-style: none;
+      }
+      .list-inline > li {
+        display: inline-block;
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+    }
+
+    @media (max-width: 599px) {
+      .s-mb {
+        margin-bottom: 30px
+      }
+    }
+
+    .mb {
+      margin-bottom: 65px
+    }
+
+    #items,.dr {
+      flex-flow: row wrap;
+    }
+
+    .abt {
+      justify-content: space-between width: 100%;
+    }
+
+    .col .br-20 {
+      border-radius: 20px
+    }
+
+    .icon {
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: inline-block;
+      width: 84px;
+      height: 84px;
+    }
+
+    .card-title i{
+      display: inline-block;
+      margin-bottom: 15px
+    }
+    .input-field input:focus+label,
+    .row .materialize-textarea:focus+label {
+      color: #A020F0 !important;
+    }
+
+    .row .input-field input:focus,
+    .row .materialize-textarea:focus {
+      border-bottom: 1px solid #A020F0 !important;
+      box-shadow: 0 1px 0 0 #4a148c !important
+    }
+
+    .dark {
+      background: #121212;
+      color: rgba(255, 255, 255, 0.87);
+      transition: color background 0.5s;
+    }
+
+    .dark nav,
+    .dark .card,.dark .card-reveal,
+    .dark .collection {
+      background: #212023;
+    }
+
+    .dark .collection,
+    .dark .collection-item {
+      border-color: #121212
+    }
+
+    .dark .collection.with-header .collection-header {
+      border-bottom-color: #121212
+    }
+
+    nav {
+      background: #fff;
+    }
+
+    .t-purple,
+    .dark nav.t-purple {
+      color: #A020F0 !important
+    }
+
+    .b-purple,
+    li .badge.b-purple,.btn-large:hover {
+      background: #A020F0;
+    }
+
+    .dark .t-purple,
+    .dark nav.t-purple {
+      color: #bb86fc
+        /*fbc02d*/
+    }
+
+    .dark .b-purple,.btn:hover {
+      background: #bb86fc;
+    }
+    .page-fooer{
+      background: rgba(255,255, 255, 0.1);
+      color: #000
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="t-purple " id="nav">
+    <div class="nav-wrapper">
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-med-and-up"><i class="fa fa-bars fa-2x "></i></a>
+
+      <a href="#!" class="hide-on-med-and-up brand-logo">&LT;KamaPeter/&GT;</a>
+      <a href="#!" class="hide-on-small-only brand-logo left">&LT;KamaPeter/&GT;</a>
+      <a href="#" id="modeSwitch" class="right mx waves-effect wave-dark"><i class="fa fa-moon-o fa-2x material-icons yellow-text text-darken-3"></i></a>
+
+      <ul class="right hide-on-small-only s-width" style="with: 500px">
+        <li><a href="#services">My Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Recent Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="#services">My Services</a></li>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#recent
+    ">Recent Projects</a></li>
+    <li><a href="#contact">Contact Me</a></li>
+  </ul>
+  <div class="container">
+    <div id="r" class="row equal">
+      <div class="col s12 m6 valign-wrapper">
+        <div class="">
+          <h2 class="left-align text-flow">Hi there!<br> I'm Kama Peter</h2>
+          <h4>Proffesional UI/UX Developer &amp; Web Developer</h4>
+          <p class="flow-txt">This is Kama Peter, a young creative Developer residing in Abuja,Nigeria. Looking forward to working with clients and agencies around the globe.</p>
+          <button type="button" class="btn b-purple waves-effect waves-light btn-large">Hire Me</button>
+        </div>
+
+      </div>
+      <div class="col s12 m6 waveb">
+        <img class="responsive-img" src="peter1.png" alt="" />
+      </div>
+    </div>
+
+    <div class="row" id="services">
+      <div class="col s12 m12">
+        <h5 class="center t-purple ">My Services</h5>
+        <div class="center">
+          <h4>What I Can Do:</h4>
+          <div class="b-purple darken-4 my-divider center"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row equal" id="items">
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">
+              <i class="fa fa-2x fa-cloud t-purple"</i><br>
+              Web Development
+            </span>
+            <p>
+              Need a website? or custom web app? I can help out. Contact me to get your standard visually appealing site as soon as possible
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4 top-off">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">
+              <i class="material-icons fa fa-wrench fa-2x  t-purple"></i><br>
+              Maintenance/ UI/UX Upgrade
+            </span>
+            <p>
+              Need a website? or custom web app? I can help out. Contact me to get your standard visually appealing site as soon as possible
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">
+              <i class="fa fa-line-chart material-icons medium t-purple"></i><br>
+              SEO Optimizations
+            </span>
+            <p>
+              Need a website? or custom web app? I can help out. Contact me to get your standard visually appealing site as soon as possible
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m4 pull-m2">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">
+              <i class="fa fa-2x fa-code t-purple material-icons"></i><br>
+              Code Review
+            </span>
+            <p>
+              Need a website? or custom web app? I can help out. Contact me to get your standard visually appealing site as soon as possible
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">
+              <i class="fa fa-2x fa-bug t-purple material-icons"></i><br>
+              Bug Fixes
+            </span>
+            <p>
+              Need a website? or custom web app? I can help out. Contact me to get your standard visually appealing site as soon as possible
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="about">
+      <div class="col s12 m12">
+        <h5 class="t-purple  center">About</h5>
+        <h4 class="center">Get To Know Me</h4>
+        <div class="my-divider b-purple darken-4 center"></div>
+      </div>
+      <div class="col s12 m12">
+        <p class="flow-tet center-align">
+          Am <strong>Kama Peter</strong> by name. I was born in Nigeria and have lived all my life there in. Being an avid reader, i can say i've being to many lands through the different books i've read. From an early age I developed an interest in understanding the principles behind the apparent order in nature. As a result i spent most of my teenage years self-learning science and mathematics.
+        </p>
+        <p class="center-align">
+          I love to replicate the beauty and order in nature in all my works. Owing to my background of using logical reasoning from an early age, I write highly optimized code. I also possess topnotch debugging skills.
+        </p>
+
+      </div>
+      <div class="col s12 m4">
+        <ul class="collection with-header card">
+          <li class="collection-header t-purple text-darken-3">
+            <h4>Hobbies</h4>
+          </li>
+          <li class="collection-item">StarGazing</li>
+          <li class="collection-item">Calculus</li>
+          <li class="collection-item">Poetry</li>
+
+          <li class="collection-item">Coding</li>
+        </ul>
+      </div>
+
+      <div class="col s12 m4">
+        <ul class="collection with-header card ">
+          <li class="collection-header t-purple">
+            <h4>Skills</h4>
+          </li>
+          <li class="collection-item"> HTML/CSS <span class="new badge b-purple" data-badge-caption="proficient"></span></li>
+          <li class="collection-item">JavaScript <span class="new badge b-purple" data-badge-caption="competent"></span></li>
+          <li class="collection-item">jQuery <span class="new badge b-purple" data-badge-caption="competent"></span></li>
+          <li class="collection-item">Bootstrap <span class="new badge b-purple" data-badge-caption="proficient"></span></li>
+          <li class="collection-item">Materialize <span class="new badge b-purple" data-badge-caption="proficient"></span></li>
+
+
+          <li class="collection-item">Vuejs <span class="new badge b-purple darken-3" data-badge-caption="competent"></span></li>
+        </ul>
+      </div>
+
+      <div class="col s12 m4">
+        <ul class="card collection with-header ">
+          <li class="collection-header t-purple text-darken-3">
+            <h4>Interests</h4>
+          </li>
+          <li class="collection-item">Astronomy</li>
+          <li class="collection-item">Software Tech</li>
+          <li class="collection-item">Literature (poetry)</li>
+
+          <li class="collection-item">Robotics</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row" id="recent">
+      <div class="col s12 m12">
+        <h5 class="t-purple  center">Recent Projects</h5>
+        <h4 class="center">Things I Did Lately</h4>
+        <div class="my-divider b-purple darken-4 center"></div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="card br-20">
+          <div class="card-image waves-effect waves-block waves-light br-20">
+            <img class="activator" src="pics/sage.png">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col s12 m4">
+        <div class="card br-20">
+          <div class="card-image waves-effect waves-block waves-light br-20">
+            <img class="activator" src="pics/sal.png">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col s12 m4">
+        <div class="card br-20">
+          <div class="card-image waves-effect waves-block waves-light br-20">
+            <img class="activator" src="pics/spont.png">
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Card Title<i class="fa right">close</i></span>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="row">
+      <div class="col s12 m12">
+        <h4 class="center">Why Choose Me? </h4>
+        <div class="my-divider center b-purple darken-4"></div>
+      </div>
+
+      <div class="col s12 m4">
+        <ul class="collection with-header card">
+
+          <li class="collection-header t-purple ">
+            <h4>What to Expect</h4>
+          </li>
+          <li class="collection-item">Speed Optimized Codes</li>
+          <li class="collection-item">Highly Responsive UI</li>
+          <li class="collection-item">Excellent User Experience</li>
+          <li class="collection-item">Seamless translation of your needs</li>
+        </ul>
+      </div>
+
+      <div class="col s12 m8">
+        <ul class="card collection with-header">
+          <li class="collection-header t-purple text-darken-3">
+            <h4>My Process</h4>
+          </li>
+          <li class="collection-item">Briefing/Discussion with clients.</li>
+          <li class="collection-item">Planning/Prototyping</li>
+          <li class="collection-item">Design Development</li>
+          <li class="collection-item">Revision/Fine-tuning</li>
+          <li class="collection-item">Delivery.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="row" id="contact">
+      <div class="col s12 m12">
+        <h5 class="center t-purple ">Contact Me</h5>
+        <h4 class="center">Let's Talk</h4>
+        <div class="my-divider center b-purple darken-4"></div>
+      </div>
+      <div class="col s12 m6 equal">
+        <div class="row valign s-mb" style="">
+          <div class="col s4 m4 mb">
+            <i class="fa fa-2x fa-facebook t-purple  large"></i>
+          </div>
+          <div class="col s4 m4 mb">
+            <i class="fa fa-2x fa-whatsapp t-purple large"></i>
+          </div>
+          <div class="col s4 m4 mb">
+            <i class="fa fa-2x fa-telegram t-purple  large"></i>
+          </div>
+          <div class="col s4 m4">
+            <i class="fa fa-2x fa-twitter large t-purple"></i>
+          </div>
+          <div class="col s4 m4">
+            <i class="fa fa-2x fa-instagram large t-purple"></i>
+          </div>
+          <div class="col s4 m4">
+            <i class="fa fa-phone fa-2x t-purple  large"></i>
+          </div>
+        </div>
+      </div>
+
+      <form class="col s12 m6">
+        <div class="row">
+          <h4 class="center-align">Talk to Me About Your Project</h4>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="fa fa-user fa-2x prefix t-purple"></i>
+            <input id="name" type="text" class="validate">
+            <label for="name">Full Name</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="fa fa-2x fa-bold prefix t-purple "></i>
+            <input id="subject" type="text" class="validate">
+            <label for="subject">Subject</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="fa fa-2x fa-pencil prefix t-purple "></i>
+            <textarea id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1">Message</label>
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col s12">
+            <div class="row center">Send Via Whatsapp or Mail:</div>
+            <button id="wbtn" type="button" class="btn-large left b-purple waves-effect wave-light">Send<i class="fa fa-2x fa-whatsapp right"></i></button>
+            <!-- </div>
+          <div class="col s6"> -->
+            <button id="mbtn" type="button" class="btn-large right b-purple waves-effect wave-light ">Send<i class="fa fa-2x fa-envelope right"></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer class="page-footer b-purple -5" style="opacity: 0.6">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 l12 center-align">
+          <h5 class="white-text">Kama Peter</h5>
+         
+        </div>
+        <div class="col m12 s12 center-align">
+         <div class="row dr equal center-align" style="justify-content: center">
+           <div class="col">
+             <a href=""><i class="fa fa-2x fa-facebook"></i></a>
+           </div>
+           <div class="col">
+             <a href=""><i class="fa fa-2x fa-telegram"></i></a>
+           </div>
+           <div class="col">
+             <a href=""><i class="fa fa-2x fa-whatsapp"></i></a>
+           </div>
+           <div class="col">
+             <a href=""><i class="fa fa-2x fa-twitter"></i></a>
+           </div>
+           <div class="col">
+             <a href=""><i class="fa fa-2x fa-envelope"></i></a>
+           </div>
+           <div class="col">
+             <a href=""><i class="fa fa-2x fa-instagram"></i></a>
+           </div>
+           <div class="col">
+             <a href=""><i class="fa fa-2x fa-phone"></i></a>
+           </div>
+           <div class="col">
+             <a href=""><i class="fa fa-2x fa-stack-overflow"></i></a>
+           </div>
+           <div class="col">
+             <a href=""><i class="fa fa-2x fa-fiverr"></i></a>
+           </div>
+         </div></div>
+        <div class="col l4 offset-l2 center s12">
+          <h5 class="white-text">Links</h5>
+          <ul class="list-inline">
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center-align">
+        © 2022 Copyright Kama Peter
+      </div>
+    </div>
+  </footer>
+
+  <script src="materialize/materialize.min.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded',
+      function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, {
+          inDuration: 300,
+          outDuration: 300
+        });
+      });
+    var modeSwitch = document.getElementById('modeSwitch'),
+      body = document.body,
+      wbtn = document.getElementById('wbtn'),
+      mbtn = document.getElementById('mbtn');
+    modeSwitch.addEventListener('click', changeMode, false);
+    var isDark = false;
+
+    function changeMode(e) {
+      var modeIcon = modeSwitch.getElementsByTagName('i')[0];
+      isDark = !isDark;
+      if (isDark) {
+        modeIcon.classList.add('fa-sun-o');
+        modeIcon.classList.remove('fa-moon-o');
+        body.classList.add('dark')
+        // body.setAttribute('id','black')
+      } else {
+        modeIcon.classList.add('fa-moon-o');
+        modeIcon.classList.remove('fa-sun-o');
+        body.classList.remove('dark')
+        // body.removeAttribute('id','black')
+      }
+    }
+
+    function SendMsg(e) {
+      var name = document.getElementById('name').value;
+      var rawMsg = document.getElementById('textarea1').value,
+        sub = document.getElementById('subject').value;
+      if (e.target.getAttribute('id') == 'wbtn') {
+        console.log(e.target.getAttribute('id'))
+        var msg = `Hi peter, am ${name}.
+        I want ${sub}. ${rawMsg}`
+        window.open(`https://wa.me/2349132295819?text=${msg}`)
+      } else {
+        window.open(`mailto:orjip507@gmail.com?subject=${sub}&body=${rawMsg}`)
+      }
+    }
+    wbtn.addEventListener('click', SendMsg, false);
+    mbtn.addEventListener('click', SendMsg, false);
+  </script>
+</body>
+
+</html>
