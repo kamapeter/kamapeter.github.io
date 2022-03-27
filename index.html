@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
-  <link rel="stylesheet" href="materialize/materialize.css" title="" type="" />
+  <link rel="stylesheet" href="materialize/materialize.min.css" title="" type="" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style type="text/css" media="all">
     html {
@@ -45,17 +45,6 @@
         display: flex;
         position: relative
       }
-
-      .top-off {
-        position: relative;
-        top: 60px
-      }
-
-      .tp-on {
-        position: relative;
-        top: -240px
-      }
-
       .s-width {
         width: 500px;
       }
@@ -130,8 +119,9 @@
 
     .dark nav,
     .dark .card,.dark .card-reveal,
-    .dark .collection {
+    .dark .collection,.dark .page-footer {
       background: #212023;
+      color: rgba(255, 255, 255, 0.87);
     }
 
     .dark .collection,
@@ -162,13 +152,20 @@
       color: #bb86fc
         /*fbc02d*/
     }
-
+    .footer-copyright, .page-footer a:hover{
+      color: #000000;
+    }
+    .dark .footer-copyright{color: #fff}
+    a:hover:not(#modeSwitch){
+      font-weight: 2000;
+      text-decoration: underline
+    }
     .dark .b-purple,.btn:hover {
       background: #bb86fc;
     }
-    .page-fooer{
-      background: rgba(255,255, 255, 0.1);
-      color: #000
+    .page-footer{
+      background: #fbfbfb;
+      color: #050505
     }
   </style>
 </head>
@@ -233,7 +230,7 @@
               Web Development
             </span>
             <p>
-              Need a website? or custom web app? I can help out. Contact me to get your standard visually appealing site as soon as possible
+              Need a website or custom web app? Got some XD/PSD or figma designs you'll like to convert? I can help out and will execute as soon as possible.
             </p>
           </div>
         </div>
@@ -247,7 +244,7 @@
               Maintenance/ UI/UX Upgrade
             </span>
             <p>
-              Need a website? or custom web app? I can help out. Contact me to get your standard visually appealing site as soon as possible
+              Its cool to occasionally change the look and feel of your site. I'm simply the best man to add that crazy modern UI feature to your app.
             </p>
           </div>
         </div>
@@ -262,7 +259,7 @@
               SEO Optimizations
             </span>
             <p>
-              Need a website? or custom web app? I can help out. Contact me to get your standard visually appealing site as soon as possible
+              I'll use the most appropriate technique SEO techniques to give your site the best rankings on major search engines. Doubting? Test me out!
             </p>
           </div>
         </div>
@@ -275,7 +272,7 @@
               Code Review
             </span>
             <p>
-              Need a website? or custom web app? I can help out. Contact me to get your standard visually appealing site as soon as possible
+              I also help proofread codes in order to ensure maximum efficiency. Feel free to invite to cross-check code for your web apps.
             </p>
           </div>
         </div>
@@ -288,7 +285,7 @@
               Bug Fixes
             </span>
             <p>
-              Need a website? or custom web app? I can help out. Contact me to get your standard visually appealing site as soon as possible
+              Sometimes reviews from site users may suggest that somethings  are not working as best as the should. Yours faithfully qould be glad to come to the rescue.
             </p>
           </div>
         </div>
@@ -366,6 +363,10 @@
           <div class="card-image waves-effect waves-block waves-light br-20">
             <img class="activator" src="pics/sage.png">
           </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">SkySage<i class="fa fa-times right"></i></span>
+            <p>Astronomy app for obtaining astronomical data of the sun moon and planets on any given day either in the past or future. Also get to see vector images of different part of the sky which includes deep sky objects<a href="https:skysage.netlify.app" class="t-purple"> Click to see the project</a></p>
+          </div>
         </div>
       </div>
 
@@ -375,6 +376,10 @@
           <div class="card-image waves-effect waves-block waves-light br-20">
             <img class="activator" src="pics/sal.png">
           </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Sal_digital<i class="fa fa-times right"></i></span>
+            <p>Multipurpose shopping site. Entirely built from scratch. <a href="https:saldigital.netlify.app" class="t-purple">Click to see the project</a></p>
+          </div>
         </div>
       </div>
 
@@ -383,10 +388,11 @@
         <div class="card br-20">
           <div class="card-image waves-effect waves-block waves-light br-20">
             <img class="activator" src="pics/spont.png">
+            
           </div>
           <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Card Title<i class="fa right">close</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            <span class="card-title grey-text text-darken-4">Spontaneous<i class="fa fa-times right"></i></span>
+            <p>Project soontaneous is a demo science learning web app targetted at inculcating scientific principles in students. <a href="https:kamapeter.github.io/project-spontaneous" class="t-purple">Click to see the project</a></p>
           </div>
         </div>
       </div>
@@ -408,7 +414,8 @@
           <li class="collection-item">Speed Optimized Codes</li>
           <li class="collection-item">Highly Responsive UI</li>
           <li class="collection-item">Excellent User Experience</li>
-          <li class="collection-item">Seamless translation of your needs</li>
+          <li class="collection-item">Swift implementation</li>
+          <li class="collection-item">Excellent Cross Browser Support</li>
         </ul>
       </div>
 
@@ -434,24 +441,36 @@
         <div class="my-divider center b-purple darken-4"></div>
       </div>
       <div class="col s12 m6 equal">
-        <div class="row valign s-mb" style="">
+        <div class="row valign-wraper s-mb">
           <div class="col s4 m4 mb">
-            <i class="fa fa-2x fa-facebook t-purple  large"></i>
+            <a href="https://www.facebook.com/peter.orji.9655">
+              <i class="fa fa-2x fa-facebook t-purple  large"></i>
+            </a>
           </div>
           <div class="col s4 m4 mb">
-            <i class="fa fa-2x fa-whatsapp t-purple large"></i>
+            <a href="https://wa.me/2349132295819">
+             <i class="fa fa-2x fa-whatsapp t-purple large"></i>
+            </a>
           </div>
           <div class="col s4 m4 mb">
-            <i class="fa fa-2x fa-telegram t-purple  large"></i>
+            <a href="https://t.me/kamapeter">
+              <i class="fa fa-2x fa-telegram t-purple  large"></i>
+            </a>
           </div>
           <div class="col s4 m4">
-            <i class="fa fa-2x fa-twitter large t-purple"></i>
+            <a href="https://www.twitter.com/KamaPeter2">
+              <i class="fa fa-2x fa-twitter large t-purple"></i>
+            </a>
           </div>
           <div class="col s4 m4">
-            <i class="fa fa-2x fa-instagram large t-purple"></i>
+            <a href="https://www.instagram/kamapeter">
+              <i class="fa fa-2x fa-instagram large t-purple"></i>
+            </a>
           </div>
           <div class="col s4 m4">
-            <i class="fa fa-phone fa-2x t-purple  large"></i>
+            <a href="tel:+2349132295819">
+              <i class="fa fa-phone fa-2x t-purple  large"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -495,11 +514,11 @@
       </form>
     </div>
   </div>
-  <footer class="page-footer b-purple -5" style="opacity: 0.6">
+  <footer class="page-footer" style="">
     <div class="container">
       <div class="row">
         <div class="col s12 l12 center-align">
-          <h5 class="white-text">Kama Peter</h5>
+          <h5 class="">Kama Peter</h5>
          
         </div>
         <div class="col m12 s12 center-align">
@@ -525,20 +544,21 @@
            <div class="col">
              <a href=""><i class="fa fa-2x fa-phone"></i></a>
            </div>
+           
            <div class="col">
-             <a href=""><i class="fa fa-2x fa-stack-overflow"></i></a>
+             <a href="https://www.github.com/kamapeter"><i class="fa fa-2x fa-github"></i></a>
            </div>
            <div class="col">
-             <a href=""><i class="fa fa-2x fa-fiverr"></i></a>
+             <a href="https://stackoverflow.com/users/15348390/peter-orji"><i class="fa fa-2x fa-stack-overflow"></i></a>
            </div>
          </div></div>
         <div class="col l4 offset-l2 center s12">
-          <h5 class="white-text">Links</h5>
+          <h5 class="">Quick Links</h5>
           <ul class="list-inline">
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            <li><a class="" href="#services">Services</a></li>
+            <li><a class="" href="#about">About Me</a></li>
+            <li><a class="" href="#recent">Recent Projects</a></li>
+            <li><a class="" href="#contact">Contact me</a></li>
           </ul>
         </div>
       </div>
