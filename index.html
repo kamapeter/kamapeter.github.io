@@ -580,6 +580,7 @@
 
   <script src="materialize/materialize.min.js" type="text/javascript" charset="utf-8"></script>
   <script>
+    var isDark;
     document.addEventListener('DOMContentLoaded',
       function() {
         var elems = document.querySelectorAll('.sidenav');
@@ -587,17 +588,29 @@
           inDuration: 300,
           outDuration: 300
         });
+        if(window.matchMedia){
+          isDark = window.matchMedia('(prefers-color-scheme: dark)').matches? true : false;
+          activateMode()
+          window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            isDark = event.matches ? true : false;
+            activateMode()
+          });
+        }else
+          isDark = false
       });
     var modeSwitch = document.getElementById('modeSwitch'),
       body = document.body,
       wbtn = document.getElementById('wbtn'),
       mbtn = document.getElementById('mbtn');
     modeSwitch.addEventListener('click', changeMode, false);
-    var isDark = false;
-
+    
     function changeMode(e) {
-      var modeIcon = modeSwitch.getElementsByTagName('i')[0];
       isDark = !isDark;
+      activateMode()
+    }
+    
+    function activateMode(){
+      var modeIcon = modeSwitch.getElementsByTagName('i')[0];
       if (isDark) {
         modeIcon.classList.add('fa-sun-o');
         modeIcon.classList.remove('fa-moon-o');
@@ -610,7 +623,7 @@
         // body.removeAttribute('id','black')
       }
     }
-
+    
     function SendMsg(e) {
       var name = document.getElementById('name').value;
       var rawMsg = document.getElementById('textarea1').value,
